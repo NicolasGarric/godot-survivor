@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://32kqglopxpt7"]
+[gd_scene load_steps=4 format=3 uid="uid://32kqglopxpt7"]
 
 [ext_resource type="PackedScene" uid="uid://32oybo5vpvlq" path="res://player.tscn" id="1_x3jm6"]
 [ext_resource type="PackedScene" uid="uid://dfphdequmxpvy" path="res://tree.tscn" id="2_6iejl"]
+[ext_resource type="PackedScene" uid="uid://dxuwlphbunck4" path="res://mob.tscn" id="3_dayc4"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -5
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_right = 1919.0
 offset_bottom = 1080.0
 
@@ -15,14 +19,31 @@ position = Vector2(928, 529)
 
 [node name="Tree" type="Node" parent="."]
 
-[node name="Tree2" parent="." instance=ExtResource("2_6iejl")]
+[node name="Tree2" parent="Tree" instance=ExtResource("2_6iejl")]
 position = Vector2(1473, 459)
 
-[node name="Tree3" parent="." instance=ExtResource("2_6iejl")]
+[node name="Tree3" parent="Tree" instance=ExtResource("2_6iejl")]
 position = Vector2(1511, 515)
 
-[node name="Tree4" parent="." instance=ExtResource("2_6iejl")]
+[node name="Tree4" parent="Tree" instance=ExtResource("2_6iejl")]
 position = Vector2(1412, 549)
 
-[node name="Tree5" parent="." instance=ExtResource("2_6iejl")]
+[node name="Tree5" parent="Tree" instance=ExtResource("2_6iejl")]
 position = Vector2(503, 849)
+
+[node name="Mob" type="Node" parent="."]
+
+[node name="mob" parent="Mob" instance=ExtResource("3_dayc4")]
+position = Vector2(952, 751)
+
+[node name="mob2" parent="Mob" instance=ExtResource("3_dayc4")]
+position = Vector2(1091, 901)
+
+[node name="mob3" parent="Mob" instance=ExtResource("3_dayc4")]
+position = Vector2(714, 895)
+
+[node name="mob4" parent="Mob" instance=ExtResource("3_dayc4")]
+position = Vector2(1347, 886)
+
+[node name="mob5" parent="Mob" instance=ExtResource("3_dayc4")]
+position = Vector2(490, 587)
