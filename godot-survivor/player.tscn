@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://32oybo5vpvlq"]
+[gd_scene load_steps=5 format=3 uid="uid://32oybo5vpvlq"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_g78iv"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_s0u3j"]
+[ext_resource type="PackedScene" uid="uid://d0awqk74rur6x" path="res://gun.tscn" id="3_04b3o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oiv76"]
 radius = 20.0
@@ -18,3 +19,5 @@ position = Vector2(0, -31)
 shape = SubResource("CapsuleShape2D_oiv76")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Gun" parent="." instance=ExtResource("3_04b3o")]
