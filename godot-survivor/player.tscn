@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_s0u3j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oiv76"]
-radius = 46.0
-height = 106.0
+radius = 20.0
+height = 40.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_g78iv")
@@ -14,5 +14,5 @@ script = ExtResource("1_g78iv")
 position = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -51)
+position = Vector2(0, -31)
 shape = SubResource("CapsuleShape2D_oiv76")
